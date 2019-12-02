@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+        <tr class="base-table-row">
+            <th>Name</th>
+            <th>Race</th>
+            <th>Level</th>
+        </tr>
+        {% if character_list %} {% for character in character_list %}
+
+        <tr class="base-table-row row-clickable" data-href="{% url 'character-details' pk=character.id %}">
+            <td>{{character.name}}</td>
+            <td>{{character.race.name}}</td>
+            <td>{{character.level}}</td>
+        </tr>
+        {%endfor%} {%endif%}
+    </table>
+    <a href="/rpg/add" class="text-center">
+        <div class="add-redirect">
+            +
+        </div>
+    </a>
+</div>
