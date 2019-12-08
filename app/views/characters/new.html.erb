@@ -1,0 +1,57 @@
+<div class="container d-flex justify-content-center">
+    <div class="col-3 text-center">
+        <%= form_with scope: :character, url: characters_path, local: true do |form| %>
+            <p>
+                <%= form.label :name %><br>
+                <%= form.text_field :name %>
+            </p>
+            <p>
+                <%= form.label :age %><br>
+                <%= form.text_field :age %>
+            </p>
+            <p>
+                <%= form.label :race %><br>
+                <%= form.text_field :race %>
+            </p>
+            <p>
+                <%= form.label :sex %><br>
+                <%= form.text_field :sex %>
+            </p>
+            <p>
+                <%= form.label :strength %><br>
+                <%= form.text_field :strength %>
+            </p>
+            <p>
+                <%= form.label :dexterity %><br>
+                <%= form.text_field :dexterity %>
+            </p>
+            <p>
+                <%= form.label :intelligence %><br>
+                <%= form.text_field :intelligence %>
+            </p>
+            <p>
+                <%= form.label :wisdom %><br>
+                <%= form.text_field :wisdom %>
+            </p>
+            <p>
+                <%= form.label :luck %><br>
+                <%= form.text_field :luck %>
+            </p>
+            <p>
+                <%= form.label :charisma %><br>
+                <%= form.text_field :charisma %>
+            </p>
+            <p>
+                <%= form.label :quote %><br>
+                <%= form.text_field :quote %>
+            </p>
+            <p>
+                <%= form.label :story %><br>
+                <%= form.text_field :story %>
+            </p>
+            <p>
+                <%= form.submit %>
+            </p>
+        <% end %>
+    </div>
+</div>
