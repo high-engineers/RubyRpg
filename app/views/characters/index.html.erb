@@ -5,16 +5,16 @@
             <th>Race</th>
             <th>Level</th>
         </tr>
-        {% if character_list %} {% for character in character_list %}
-
-        <tr class="base-table-row row-clickable" data-href="{% url 'character-details' pk=character.id %}">
-            <td>{{character.name}}</td>
-            <td>{{character.race.name}}</td>
-            <td>{{character.level}}</td>
+        <% @characters.each do |character| %>
+        <tr class="base-table-row row-clickable">
+        
+            <td><%= link_to character.Name, character_path(character) %></td>
+            <td><%= character.race.Name %></td>
+            <td><%= character.Level %></td>
         </tr>
-        {%endfor%} {%endif%}
+        <% end %>
     </table>
-    <a href="/rpg/add" class="text-center">
+    <a href="/characters/new" class="text-center">
         <div class="add-redirect">
             +
         </div>

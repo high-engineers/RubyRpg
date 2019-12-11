@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-center">
+    <div class="col-3 text-center">
+    <%= form_with scope: :skill, url: character_skills_path, local: true do |form| %>
+        <p>
+            <%= form.label :name %><br>
+            <%= form.text_field :name %>
+        </p>
+        <p>
+            <%= form.label :description %><br>
+            <%= form.text_field :description %>
+        </p>
+        <p>
+            <%= form.label :mana_cost %><br>
+            <%= form.text_field :mana_cost %>
+        </p>
+        <p>
+            <%= form.label :damage %><br>
+            <%= form.text_field :damage %>
+        </p>
+        <p>
+            <%= form.label :multiplier %><br>
+            <%= form.text_field :multiplier %>
+        </p>
+        <p>
+            <%= form.submit %>
+        </p>
+        <% end %>
+    </div>
+</div>

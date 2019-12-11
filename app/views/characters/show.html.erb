@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card border-secondary" style="margin:10px">
+                <div class="card-body" style="height:300px">
+                    <h4 class="card-title">Skills: </h4>
+                    <% @character.skill.each do |skill| %>
+                        <p class="card-text"><%= link_to skill.Name, character_skill_path(@character, skill) %></p>
+                    <% end %>
+                    <%= link_to '+', character_skills_path(@character) %>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-secondary" style="margin:10px;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="card-title"><%= @character.Name %></h4>
+                            <p class="card-text"><%= @character.Age %> years</p>
+                            <p class="card-text"><%= @character.Sex %></p>
+                            <p class="card-text"><%= @character.Level %>th level</p>
+                            <p class="card-text">Health: <%= @character.condition.Health %>/<%= @character.condition.MaxHealth %></p>
+                            <p class="card-text">Mana: <%= @character.condition.Mana %>/<%= @character.condition.MaxMana %></p>
+                            <p class="card-text">Experience: <%= @character.condition.Experience %>/<%= @character.condition.MaxExperience %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-secondary" style="margin:10px">
+                <div class="card-body">
+                    <h4 class="card-title">Contribution points: </h4>
+                    <table class="table table-hover">
+                        <tr class="table-default">
+                            <th scope="row">Strength</th>
+                            <td><%= @character.statistic.Strength %></td>
+                        </tr>
+                        <tr class="table-default">
+                            <th scope="row">Dexterity</th>
+                            <td><%= @character.statistic.Dexterity %></td>
+                        </tr>
+                        <tr class="table-default">
+                            <th scope="row">Intelligence</th>
+                            <td><%= @character.statistic.Inteligence %></td>
+                        </tr>
+                        <tr class="table-default">
+                            <th scope="row">Wisdom</th>
+                            <td><%= @character.statistic.Wisdom %></td>
+                        </tr>
+                        <tr class="table-default">
+                            <th scope="row">Luck</th>
+                            <td><%= @character.statistic.Luck %></td>
+                        </tr>
+                        <tr class="table-default">
+                            <th scope="row">Charisma</th>
+                            <td><%= @character.statistic.Charisma %></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-secondary" style="margin: 10px">
+                <div class="card-body">
+                    <blockquote class="blockquote">
+                        <p class="mb-0 text-muted"><%= @character.Quote %></p>
+                    </blockquote>
+                    <blockquote class="blockquote">
+                        <p class="mb-0"><%= @character.Story %></p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="card border-secondary" style="margin: 10px">
+                <div class="card-body border-secondary">
+                    <div class="card-title">
+                        <h4> <%= @character.race.Name %> </h4>
+                    </div>
+                    <blockquote class="blockquote">
+                        <p class="mb-0"><%= @character.race.BackStory %></p>
+                    </blockquote>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

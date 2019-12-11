@@ -1,0 +1,2 @@
+module Characters::SkillsHelper
+end

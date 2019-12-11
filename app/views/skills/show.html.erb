@@ -1,0 +1,15 @@
+<div class="container justify-content-center">    
+    <div class="col">
+            <div class="card border-secondary" style="margin:10px">
+                <div class="card-body" style="height:300px">
+                    <h4 class="card-title"><%= @skill.Name %> </h4>
+                    <p class="card-text">Damage: <%= @skill.Damage %> </p>
+                    <p class="card-text">Mana cost: <%= @skill.ManaCost %> </p>
+                    <p class="card-text">Multiplier: <%= @skill.Multiplier %> </p>
+                    <p class="card-text">Description: <%= @skill.Description %></p>
+                    <%= link_to 'GoBack', character_url(params[:character_id]) %>
+                </div>
+            </div>
+                
+    </div>   
+</div>
